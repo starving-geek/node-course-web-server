@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        message: 'Projects page here'
+    })
+})
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to fulfill request'
